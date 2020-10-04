@@ -16,7 +16,7 @@ describe(projectName, () => {
     expect(declare).toBeDefined();
   });
 
-  test('Should have "then" method which Resolves with a Declare', () => {
+  test('Should have "then" method which returns a Declare', () => {
     const declare = new Declare(()=>{});
     expect(typeof declare.then).toBe("function");
     return expect(declare.then() instanceof Declare).toBe(true);
